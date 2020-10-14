@@ -19,5 +19,15 @@
    else
      echo "Last name is invalid";
    fi
+   
+   echo "check the email pattern"
+   pat="^[0-9a-zA-Z]+([._+-][0-9a-zA-z]+)?@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})?$"
+   read any
+   if [[ $any =~ $pat ]];
+   then
+     echo "it's a valid email";
+   else
+     echo "it's a invalid email";
+   fi
 
 
