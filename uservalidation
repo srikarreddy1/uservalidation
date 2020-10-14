@@ -5,8 +5,19 @@
    read any
    if [[ $any =~ $pat ]];
    then
-     echo "valid";
+     echo "First name is valid";
    else
-     echo "invalid";
+     echo "First name is invalid";
+   fi 
+
+   echo "check the user Last name"
+   pat="^[[:upper:]]{3,}[a-z0-9]*|[[:upper:]]{1,}[a-z0-9]{2,}"
+   read any
+   if [[ $any =~ $pat ]];
+   then
+     echo "Last name is valid";
+   else
+     echo "Last name is invalid";
    fi
+
 
