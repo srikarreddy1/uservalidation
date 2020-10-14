@@ -41,7 +41,7 @@
    fi
 
    echo "check the password pattern"
-   pat="[0-9a-zA-Z]{8,}"
+   pat="[[:upper:]]{1,}[0-9a-z]{7,}|[[:upper:]]{8,}[0-9a-z]*"
    read any
    if [[ $any =~ $pat ]];
    then
