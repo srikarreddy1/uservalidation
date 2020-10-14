@@ -40,3 +40,13 @@
      echo "invalid mobile format";
    fi
 
+   echo "check the password pattern"
+   pat="[0-9a-zA-Z]{8,}"
+   read any
+   if [[ $any =~ $pat ]];
+   then
+     echo "valid password";
+   else
+     echo "invalid password";
+   fi
+
